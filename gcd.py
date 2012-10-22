@@ -1,16 +1,17 @@
 import sys
 
-class Nod:
+class GreatestCommonDivisor (object):
 	result = []
 	modulo = []
 	x	   = [1,0]
 	
 	def __init__ (self, _divident, _divider):
-		self.nodCalculation(_divident, _divider)
-		self.nodLinearExpansion(_divident, _divider)
+		super(GreatestCommonDivisor , self).__init__()
+		self.gcdCalculation(_divident, _divider)
+		self.gcdLinearExpansion(_divident, _divider)
 
 
-	def nodCalculation (self, divident, divider):
+	def gcdCalculation (self, divident, divider):
 
 		print("Started work with", divident, "and", divider)
 
@@ -31,7 +32,7 @@ class Nod:
 		print ("Modulos", self.modulo)
 
 
-	def nodLinearExpansion (self, divident, divider):
+	def gcdLinearExpansion (self, divident, divider):
 		
 		while ((len (self.x) - 2) != len (self.modulo)):
 			xResult = self.x[len(self.x) - 2] - self.result[len(self.x) - 2] * self.x[len(self.x) - 1]
@@ -52,6 +53,6 @@ def help():
 if ((len(sys.argv) < 3) or (len(sys.argv) > 3)):
 	help ()
 elif (sys.argv[1] < sys.argv[2]):
-	nod = Nod(sys.argv[2], sys.argv[1])
+	gcd = GreatestCommonDivisor(sys.argv[2], sys.argv[1])
 else:
-	nod = Nod(sys.argv[1], sys.argv[2])
+	gcd = GreatestCommonDivisor(sys.argv[1], sys.argv[2])

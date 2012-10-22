@@ -1,4 +1,3 @@
-
 class primeNumbersGenerator (object):
 	def __init__(self, number):
 		super(primeNumbersGenerator , self).__init__()

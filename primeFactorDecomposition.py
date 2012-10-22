@@ -1,10 +1,10 @@
 import sys
 import primeNumbersGenerator
 
-class Decomposition (object):
+class PrimeFactorDecomposition (object):
 
 	def __init__ (self, number):
-		super(Decomposition , self).__init__()
+		super(PrimeFactorDecomposition , self).__init__()
 		print("Programm started with number", number)
 	
 		self.result = []
@@ -16,7 +16,7 @@ class Decomposition (object):
 			return
 		else:
 			self.calculation(number, primeGenerator.primes[0:len(primeGenerator.primes)])
-			print ("Result:", self.result)
+			print ("Number decomposition:", self.result)
 
 
 	def calculation (self, number, primes):

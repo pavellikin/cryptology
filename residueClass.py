@@ -1,17 +1,17 @@
 import sys
-import dec
+import primeFactorDecomposition
 
 class residueClass (object):
 	def __init__(self, number):
 		super(residueClass , self).__init__()
 
-		decomposition = dec.Decomposition(number)
+		decomposition = primeFactorDecomposition.PrimeFactorDecomposition(number)
 		self.calculation(number, decomposition.result, 0)
 
 
 	def calculation (self, number, decomposition, previousDecomposition = 0):
 		if len(decomposition) == 0:
-			print (int(number))
+			print ("Residue classes:", int(number))
 			return
 
 		if previousDecomposition == decomposition[0]:
