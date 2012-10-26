@@ -11,7 +11,7 @@ class residueClass (object):
 
 	def calculation (self, number, decomposition, previousDecomposition = 0):
 		if len(decomposition) == 0:
-			print ("Residue classes:", int(number))
+			print ("Residue classes:", int(number) - 1)
 			return
 
 		if previousDecomposition == decomposition[0]:
